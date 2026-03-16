@@ -1,5 +1,5 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import type { Request, Response } from "express";
+import type { VercelRequest, VercelResponse } from "@vercel/node";
 
 const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
 
@@ -168,8 +168,8 @@ async function callSectionImageReviewAI(
 }
 
 export default async function handler(
-  req: Request,
-  res: Response
+  req: VercelRequest,
+  res: VercelResponse
 ): Promise<void> {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
