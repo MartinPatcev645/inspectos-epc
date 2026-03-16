@@ -1,0 +1,36 @@
+Gas Inspection Tool — Visual Review Notes
+==========================================
+
+1. Property Section (Section 1):
+   - Renders correctly with all fields
+   - Bilingual labels (PT/EN) working
+   - District dropdown, Building Type dropdown present
+   - Inspection date defaults to today
+   - EIG field with full acronym expansion
+
+2. Piping Section (Section 3) — currently displayed:
+   - Material and Routing Type dropdowns present
+   - 5 defect selectors (Condition, Supports, Corrosion, Joints, Labeling)
+   - All showing "Conforme" (green) by default
+   - Tipo A, Tipo B, Tipo G buttons visible
+   - Tightness test toggle with conditional fields
+   - Notes textarea at bottom
+
+3. Navigation:
+   - Sidebar section nav works correctly
+   - Active section highlighted in navy
+   - Status dots visible on each section
+   - Anterior/Seguinte buttons at bottom
+
+4. Header:
+   - InspectOS Gas branding with flame icon
+   - Live verdict badge "APROVADO" in green
+   - Defect counters: OK 27, A 0, B 0, G 0
+
+5. View tabs:
+   - Inspeção, Resultado, Defeitos, Relatório all visible
+
+ISSUES FOUND:
+- It jumped to Piping (Section 3) instead of Gas Supply (Section 2) when clicking Abastecimento
+  Actually looking again, it seems it went to Tubagem (Piping) which is section 3 - the click target might have been off
+  Need to verify section navigation accuracy

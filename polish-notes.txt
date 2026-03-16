@@ -1,0 +1,15 @@
+Desktop View Review (2026-03-06):
+- App loads correctly with all components visible
+- Left sidebar shows: Energy Rating Badge (F, 3.70 ratio), Energy Breakdown Chart, Section navigation
+- Main area shows: Progress bar with 9 section tabs, Property Identification form
+- Section navigation in sidebar lists all 9 sections + Results/Improvements/Report + New Assessment
+- Form fields are properly laid out with bilingual labels
+- Energy class bar shows all classes A+ through F with F highlighted
+- Chart shows Heating/Cooling/DHW/Renewables breakdown
+- Seguinte (Next) button visible at bottom
+- Overall layout looks professional and functional
+
+Issues to fix:
+1. The section tabs in the progress bar are very compressed horizontally - text is cut off
+2. The "SECÇÕES / SECTIONS" sidebar heading could be more compact
+3. Need to verify mobile layout works properly

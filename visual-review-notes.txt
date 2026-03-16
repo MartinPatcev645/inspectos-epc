@@ -1,0 +1,48 @@
+Visual Review Notes — InspectOS EPC Assessment Tool
+Date: 2026-03-06
+
+COMPREHENSIVE TESTING RESULTS:
+
+1. SECTION 1 (Property Identification) — WORKING
+   - Address input works
+   - District dropdown shows all 20 districts with climate zones
+   - Climate zone auto-assigns correctly (Lisboa -> I2)
+   - Typology dropdown works (T0-T5+)
+   - Live calculation updates when floor area entered (85m² -> Ntc 388.2)
+   - Progress bar updates to 17%
+
+2. SECTION 2 (Building Envelope) — WORKING
+   - Wall entry form renders with facade, material type, thickness, U-value, area, insulated toggle
+   - "Add Wall" button present
+   - Roof section with type, U-value, area, insulated toggle
+   - Floor section with type, U-value, area, insulated toggle
+   - Thermal bridges section with "Add Thermal Bridge" button
+   - Previous/Next navigation works
+
+3. SECTION 6 (Cooling System) — WORKING
+   - System type dropdown, fuel dropdown
+   - EER field, nominal power field
+   - Distribution dropdown
+   - Previous/Next navigation
+
+4. RESULTS VIEW — WORKING
+   - Hero banner with "Resultados da Avaliação" title
+   - Certificate data section (Perito name, ADENE registration, dates)
+   - Full energy class display with A+ to F scale and pointer
+   - Energy breakdown chart with bar chart
+   - "Melhorias" and "Relatório" action buttons
+
+5. IMPROVEMENTS VIEW — WORKING
+   - 4 improvement recommendations shown:
+     #1: Adicionar Isolamento na Cobertura (-86.5 kWhep, €1,500-4,000, 2.7yr payback)
+     #2: Instalar Solar Térmico para AQS (-65.4 kWhep, €3,000-5,500, 4.8yr payback)
+     #3: Instalar Sistema Solar Fotovoltaico (-49.4 kWhep, €4,000-7,000, 8.7yr payback)
+     #4: Aplicar Isolamento ETICS nas Paredes (-24.5 kWhep, €5,000-15,000, 32yr payback)
+   - Each shows current->improved rating badges, cost range, payback, impact bar
+
+ISSUES NOTED:
+- The improvement rating badges show F -> F for all (because no data entered yet for those systems)
+- This is CORRECT behavior — the ratings should change when actual building data is entered
+- Sidebar section names get truncated on smaller desktop widths (acceptable, full names show on hover)
+
+MOBILE: Need to verify mobile layout separately

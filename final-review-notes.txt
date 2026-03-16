@@ -1,0 +1,27 @@
+REPORT VIEW — FULLY WORKING
+The EPC Report renders a complete certificate-style document with:
+
+SECÇÃO A — Property Characteristics
+- Shows address (Rua da Prata 25, 3º Esq), District (Lisboa), Typology (T2), Area (85m²), Year (1975), Climate Zone (I2)
+- Building envelope table with Wall, Roof, Floor entries showing area, U-value, insulation status
+
+SECÇÃO B — Energy Systems
+- Table showing Heating, Cooling, DHW systems with type, fuel, efficiency columns
+
+SECÇÃO C — Energy Performance
+- Five-column display: Nic (308.5), Nvc (4.8), Qa (74.9), Eren (0), Ntc (388.2)
+- Large Ntc/Nt ratio (3.88) with F class badge
+
+SECÇÃO D — Recommended Improvements
+- Table with 4 measures: measure name, current class, improved class, Ntc reduction, cost, payback
+
+SECÇÃO E — Inspector Notes
+- Shows "No observations recorded" (correct for empty data)
+
+Footer: "Gerado por InspectOS EPC Assessment Tool — 06/03/2026"
+Legal disclaimer about DL 101-D/2020, REH, Despacho 15793-E/2013
+Note that document does not substitute official ADENE/SCE certificate
+
+Action buttons: "Copiar JSON / Copy JSON" and "Imprimir / Print"
+
+ALL MAJOR FEATURES CONFIRMED WORKING.
