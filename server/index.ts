@@ -8,11 +8,12 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
+const GOOGLE_API_KEY =
+  process.env.GOOGLE_API_KEY || process.env.GOOGLE_API_KEY_GAS;
 
 if (!GOOGLE_API_KEY) {
   console.warn(
-    "[AI] GOOGLE_API_KEY is not set. /api/ai/section-image-review will return errors."
+    "[AI] GOOGLE_API_KEY / GOOGLE_API_KEY_GAS is not set. /api/ai/section-image-review will return errors."
   );
 }
 
@@ -83,7 +84,9 @@ async function callSectionImageReviewAI(
   body: SectionImageReviewBody
 ): Promise<SectionImageReviewResult> {
   if (!GOOGLE_API_KEY || !model) {
-    throw new Error("GOOGLE_API_KEY is not set on the server.");
+    throw new Error(
+      "GOOGLE_API_KEY / GOOGLE_API_KEY_GAS is not set on the server."
+    );
   }
 
   const { imageBase64, mimeType, sectionId, sectionName } = body;
